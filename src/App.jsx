@@ -37,12 +37,12 @@ const App = () => {
   const searchedContact = contacts.filter(contact => contact.name.toLowerCase().includes(search.toLowerCase()))
 
   return (
-    <>
+    <div className={css.container}>
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm onAdd={addContact} />
       <SearchBox value={search} onSearch={setSearch}/>
       <ContactList contacts={searchedContact} onDelete={removeContact}/>
-    </>
+    </div>
   );
 };
 

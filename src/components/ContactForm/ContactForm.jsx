@@ -27,8 +27,8 @@ function ContactForm({ onAdd }) {
 
   const handleSubmit = (values, actions) => {
     onAdd({
-      ...values,
       id: Date.now(),
+      ...values,
     });
     actions.resetForm();
   };
